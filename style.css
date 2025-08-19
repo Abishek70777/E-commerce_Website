@@ -37,7 +37,7 @@ p{
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
-    padding-right: 25px;;
+    padding-right: 25px;
 }
 .row {
     display: flex;
@@ -48,11 +48,16 @@ p{
 .col-2 {
     flex-basis:50%;
     min-width:300px;
+    perspective: 500px;
+    transition: 0.5s ease-in;
 }
 .col-2 img{
     max-width: 100%;
     border-radius: 50px;
     padding: 25px 25px;
+}
+.col-2 img:hover {
+    transform: translateZ(8px);
 }
 .col-2 h1 {
     font-size: 50px;
@@ -108,6 +113,7 @@ p{
     padding : 10px;
     min-width: 200px;
     margin-bottom: 50px;
+    transition: 0.5s;
 }
 .col-4 img {
     width: 100%;
@@ -115,4 +121,35 @@ p{
 }
 .rating {
     font-family: 'Times New Roman', Times, serif;
+}
+.title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.title::after {
+    content: '';
+    background: hsl(0, 0%, 28%);
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h4 {
+    color: #555;
+    font-weight: normal;
+}
+.col-4 p {
+    font-size: 14px;
+}
+.rating {
+    color: hsl(0, 0%, 28%);
+}
+.col-4:hover {
+    transform: translateY(-10px);
 }
